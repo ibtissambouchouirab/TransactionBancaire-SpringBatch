@@ -8,6 +8,7 @@ import lombok.Setter;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 import java.time.LocalDateTime;
 
 @Entity
@@ -22,6 +23,7 @@ public class Transaction {
     private Long id ;
     private long accountID;
     private LocalDateTime transactionDate;
+    @Transient
     private String StrTransactionDate;
     private String transactionType;
     private Double amount;
